@@ -6,6 +6,6 @@ response = client.list_tasks(
     desiredStatus='running'
 )
 
-print(response)
-
-
+tasks= response['taskArns']
+taskArns= "\n".join(tasks)
+print(taskArns)

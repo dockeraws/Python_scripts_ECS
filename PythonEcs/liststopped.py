@@ -5,7 +5,7 @@ response = client.list_tasks(
     cluster=str(sys.argv[1]),
     desiredStatus='stopped'
 )
-
-print(response)
-
+tasks=response['taskArns']
+taskArns="\n".join(tasks)
+print(taskArns)
 
